@@ -167,18 +167,23 @@ summary {
 }
 footer {
   max-width: 1080px;
-  margin: 0 auto 24px;
-  padding: 0 20px;
-  color: var(--muted);
-  font-size: 13px;
+  margin: 32px auto 40px;
+  padding: 20px 20px 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
 }
 .assinatura {
   margin: 0;
-  font-weight: 650;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
   color: var(--ink);
 }
 .assinatura-meta {
-  margin: 2px 0 0;
+  margin: 6px 0 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
 }
 
 @media (max-width: 900px) {
