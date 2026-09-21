@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dct-tocantins
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python consulta/servidor.py

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta DCT Tocantins</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <p class="eyebrow">Documento Curricular do Tocantins · Ensino Fundamental</p>
+      <h1>Consulta às habilidades</h1>
+      <p class="lead">Tudo isto saiu dos 3 PDFs do DCT que você enviou. Não há outro documento.</p>
+      <dl class="stats" id="stats" hidden></dl>
+      <p class="downloads">
+        Baixar o banco:
+        <a href="/download/dct_tocantins.sqlite">SQLite (.sqlite)</a>
+        <a href="/download/dct_tocantins.sql">SQL (.sql)</a>
+        <a href="/download/dct_tocantins.xlsx">Planilha (.xlsx)</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <form class="filters" id="filtros" autocomplete="off">
+      <label>
+        Componente
+        <select name="componente" id="componente">
+          <option value="">Todos</option>
+          <option>Língua Portuguesa</option>
+          <option>Língua Inglesa</option>
+          <option>Arte</option>
+          <option>Educação Física</option>
+          <option>Ciências</option>
+          <option>Matemática</option>
+          <option>Geografia</option>
+          <option>História</option>
+          <option>Ensino Religioso</option>
+        </select>
+      </label>
+      <label>
+        Ano
+        <select name="ano" id="ano">
+          <option value="">Todos</option>
+          <option value="1">1º</option>
+          <option value="2">2º</option>
+          <option value="3">3º</option>
+          <option value="4">4º</option>
+          <option value="5">5º</option>
+          <option value="6">6º</option>
+          <option value="7">7º</option>
+          <option value="8">8º</option>
+          <option value="9">9º</option>
+        </select>
+      </label>
+      <label>
+        Bimestre
+        <select name="bimestre" id="bimestre">
+          <option value="">Todos</option>
+          <option value="1">1º</option>
+          <option value="2">2º</option>
+          <option value="3">3º</option>
+          <option value="4">4º</option>
+        </select>
+      </label>
+      <label>
+        Tipo de código
+        <select name="origem" id="origem">
+          <option value="">Todos os do DCT</option>
+          <option value="BNCC">Nacionais (BNCC)</option>
+          <option value="DCT_TO">Acrescentadas no TO</option>
+        </select>
+      </label>
+      <label class="grow">
+        Busca
+        <input type="search" name="q" id="q" placeholder="Código ou trecho da habilidade, ex. EF06CI02">
+      </label>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <p class="hint">
+      O DCT traz as habilidades da Base Nacional (código tipo <code>EF06CI02</code>)
+      e algumas que o Tocantins criou (código termina em <code>TO</code>, tipo <code>EF04GE13TO</code>).
+      Os dois tipos estão nos mesmos PDFs.
+    </p>
+    <p class="count" id="count">Escolha um filtro ou busque um código.</p>
+    <section class="lista" id="lista" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>Tudo extraído dos 3 cadernos do DCT/TO. A etiqueta no cartão só diz se o código é da BNCC ou se o Tocantins acrescentou aquela habilidade.</p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
