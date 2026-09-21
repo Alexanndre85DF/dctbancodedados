@@ -172,6 +172,14 @@ footer {
   color: var(--muted);
   font-size: 13px;
 }
+.assinatura {
+  margin: 0;
+  font-weight: 650;
+  color: var(--ink);
+}
+.assinatura-meta {
+  margin: 2px 0 0;
+}
 
 @media (max-width: 900px) {
   .filters { grid-template-columns: 1fr 1fr; position: static; }
