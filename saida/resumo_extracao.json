@@ -1,0 +1,69 @@
+{
+  "alocacoes": 2186,
+  "habilidades_unicas": 1346,
+  "componentes": {
+    "AR": {
+      "nome": "Arte",
+      "alocacoes": 248,
+      "habilidades": 59,
+      "codigos_TO": 0,
+      "sem_enunciado": 0
+    },
+    "CI": {
+      "nome": "Ciências",
+      "alocacoes": 185,
+      "habilidades": 110,
+      "codigos_TO": 0,
+      "sem_enunciado": 0
+    },
+    "EF": {
+      "nome": "Educação Física",
+      "alocacoes": 214,
+      "habilidades": 103,
+      "codigos_TO": 42,
+      "sem_enunciado": 0
+    },
+    "ER": {
+      "nome": "Ensino Religioso",
+      "alocacoes": 59,
+      "habilidades": 59,
+      "codigos_TO": 0,
+      "sem_enunciado": 2
+    },
+    "GE": {
+      "nome": "Geografia",
+      "alocacoes": 119,
+      "habilidades": 119,
+      "codigos_TO": 3,
+      "sem_enunciado": 3
+    },
+    "HI": {
+      "nome": "História",
+      "alocacoes": 157,
+      "habilidades": 156,
+      "codigos_TO": 31,
+      "sem_enunciado": 9
+    },
+    "LI": {
+      "nome": "Língua Inglesa",
+      "alocacoes": 260,
+      "habilidades": 124,
+      "codigos_TO": 0,
+      "sem_enunciado": 1
+    },
+    "LP": {
+      "nome": "Língua Portuguesa",
+      "alocacoes": 656,
+      "habilidades": 351,
+      "codigos_TO": 1,
+      "sem_enunciado": 1
+    },
+    "MA": {
+      "nome": "Matemática",
+      "alocacoes": 288,
+      "habilidades": 265,
+      "codigos_TO": 32,
+      "sem_enunciado": 0
+    }
+  }
+}

@@ -1,0 +1,57 @@
+DCT Tocantins — o que foi entregue
+===================================
+
+Arquivos nesta pasta:
+
+1. dct_tocantins.xlsx
+   Planilha de conferência. Abra no Excel.
+   Aba LEIA-ME explica as colunas.
+   Uma aba por disciplina + aba TODAS.
+
+2. dct_tocantins.sqlite
+   Banco para o sistema. Copie este arquivo e entregue para a TI.
+   Pode abrir com DB Browser for SQLite.
+
+3. dct_tocantins.sql
+   O mesmo banco em texto SQL (CREATE + INSERT), para importar
+   em outro programa se pedirem script.
+
+4. dct_tocantins.json
+   Os mesmos registros em JSON, se a equipe de TI preferir importar assim.
+
+4. resumo_extracao.json
+   Contagem do que foi extraído.
+
+Como usar no sistema
+--------------------
+A consulta principal já existe no banco:
+
+  SELECT * FROM v_consulta
+  WHERE componente = 'Geografia' AND ano = 6 AND bimestre = 2;
+
+Isso devolve código, enunciado, objetos, sugestão pedagógica e página do PDF.
+
+O que entra e o que não entra
+-----------------------------
+Entra: quadros do organizador curricular (habilidade, ano, bimestre,
+unidade, objetos, sugestões, articulações).
+
+Não entra: apresentações, créditos, textos teóricos e referências.
+Isso continua nos 3 PDFs originais.
+
+Atenção
+-------
+Os PDFs não são tabelas “limpas”: texto vertical, colunas coladas e
+hifenização. Por isso a planilha precisa de conferência pedagógica,
+principalmente nas colunas unidade_tematica e enunciado.
+
+Para gerar de novo: python scripts/montar_dct.py
+
+Página de consulta
+------------------
+Na pasta consulta, dê dois cliques em abrir_consulta.bat
+ou rode: python consulta/servidor.py
+
+Abre em http://127.0.0.1:8765/
+A tela filtra o banco por disciplina, ano, bimestre, origem e código.
+
